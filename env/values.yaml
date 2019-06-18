@@ -9,11 +9,11 @@ cluster:
 
 gitops:
   dev:
-    gitUrl: https://github.com/jenkins-x/environment-tekton-mole-dev.git
+    gitUrl: https://github.com/cb-kubecd/environment-jstrachan-ad1.git
   staging:
-    gitUrl: https://github.com/jenkins-x/environment-tekton-mole-staging.git
+    gitUrl: https://github.com/cb-kubecd/environment-jstrachan-ad1-staging.gitt
   production:
-    gitUrl: https://github.com/jenkins-x/environment-tekton-mole-production.git
+    gitUrl: https://github.com/cb-kubecd/environment-jstrachan-ad1-production.git
 
 controllerbuild:
   enabled: true
