@@ -1,0 +1,5 @@
+description: Kube System Chart
+maintainers:
+- name: Team
+name: jxing
+version: "1"

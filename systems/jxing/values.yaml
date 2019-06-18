@@ -1,0 +1,11 @@
+nginx-ingress:
+  controller:
+    extraArgs:
+      publish-service: kube-system/jxing-nginx-ingress-controller
+    service:
+      omitClusterIP: true
+  defaultBackend:
+    service:
+      omitClusterIP: true
+  rbac:
+    create: true

@@ -1,0 +1,17 @@
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  creationTimestamp: null
+  name: production
+spec:
+  kind: Permanent
+  label: Production
+  namespace: {{ .Values.cluster.namespace | default "jx" }}-production
+  order: 200
+  previewGitInfo:
+    user: {}
+  promotionStrategy: Manual
+  source:
+    ref: master
+    url: {{ .Values.gitops.production.gitUrl }}
+  teamSettings: {}

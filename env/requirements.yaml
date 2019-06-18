@@ -1,0 +1,16 @@
+dependencies:
+- alias: tekton
+  name: tekton
+  repository: http://chartmuseum.jenkins-x.io
+  version: 0.0.38
+- alias: prow
+  name: prow
+  repository: http://chartmuseum.jenkins-x.io
+  version: 0.0.620
+- name: jenkins-x-platform
+  repository: http://chartmuseum.jenkins-x.io
+  version: 0.0.3877
+- condition: chartmuseum.enabled
+  name: chartmuseum
+  repository: http://chartmuseum.jenkins-x.io
+  version: 1.1.4

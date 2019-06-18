@@ -1,0 +1,14 @@
+auth:
+  git:
+    username: jenkins-x-bot
+buildnum:
+  enabled: false
+pipelinerunner:
+  enabled: "true"
+  # image:
+  #   repository: rawlingsj80/builder-maven
+  #   tag: wip80
+tillerNamespace: ""
+
+sinker:
+  replicaCount: 0

@@ -1,0 +1,46 @@
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  labels:
+    env: dev
+    team: {{ .Values.cluster.namespace | default "jx" }}
+  name: dev
+spec:
+  kind: Development
+  label: Development
+  namespace: {{ .Values.cluster.namespace | default "jx" }}
+  previewGitInfo:
+    user: {}
+  promotionStrategy: Never
+  source:
+    ref: master
+    url: {{ .Values.gitops.dev.gitUrl }}
+  teamSettings:
+    appsRepository: http://chartmuseum.jenkins-x.io
+    buildPackName: kubernetes-workloads
+    buildPackRef: master
+    buildPackUrl: https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes.git
+    dockerRegistryOrg: jenkins-x-infra
+    envOrganisation: jenkins-x
+    gitServer: https://github.com
+    helmTemplate: true
+    importMode: YAML
+    kubeProvider: gke
+    pipelineUsername: {{ .Values.prow.auth.git.username }}
+    promotionEngine: Prow
+    prowEngine: Tekton
+    quickstartLocations:
+    - excludes:
+      - WIP-*
+      gitKind: github
+      gitUrl: https://github.com
+      includes:
+      - '*'
+      owner: jenkins-x-quickstarts
+    storageLocations:
+    - bucketUrl: gs://jx-prod-logs
+      classifier: default
+    - bucketUrl: gs://jx-prod-logs
+      classifier: logs
+    useGitOps: true
+  webHookEngine: Prow
