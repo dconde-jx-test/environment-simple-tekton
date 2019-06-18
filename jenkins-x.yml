@@ -39,6 +39,10 @@ pipelineConfig:
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: jx
+              - name: verify-install
+                dir: /workspace/source/env
+                command: jx
+                args: ['step','verify','install']
     pullRequest:
       pipeline:
         agent:
