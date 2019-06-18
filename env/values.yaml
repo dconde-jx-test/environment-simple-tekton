@@ -1,6 +1,6 @@
 cluster:
   serverUrl: https://35.241.234.29
-  domain: 35.241.234.29
+  domain: 35.241.234.29.nip.io
   namespaceSubDomain: .jx.
   projectID: jenkins-x-infra
   name: tekton-mole

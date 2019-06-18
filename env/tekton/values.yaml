@@ -1,4 +1,4 @@
 auth:
   git:
-    username: jenkins-x-bot
+    username: jenkins-x-bot-test
 tillerNamespace: ""
