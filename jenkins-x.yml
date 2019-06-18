@@ -21,7 +21,7 @@ pipelineConfig:
               - name: kube-system
                 dir: /workspace/source/systems/jxing
                 command: jx
-                args: ['step','helm','apply', '--remote', '--name', 'jx']
+                args: ['step','helm','apply', '--remote', '--name', 'jxing']
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: kube-system
@@ -35,7 +35,7 @@ pipelineConfig:
               - name: helm-default-vales
                 dir: /workspace/source/env
                 command: jx
-                args: ['step','create','install', 'values']
+                args: ['step','create','install', 'values', '-b']
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: jx
