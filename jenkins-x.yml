@@ -21,21 +21,21 @@ pipelineConfig:
               - name: kube-system
                 dir: /workspace/source/systems/jxing
                 command: jx
-                args: ['step','helm','apply', '--remote']
+                args: ['step','helm','apply', '--remote', '--name', 'jx']
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: kube-system
               - name: cert-manager
                 dir: /workspace/source/systems/cm
                 command: jx
-                args: ['step','helm','apply', '--remote']
+                args: ['step','helm','apply', '--remote', '--name', 'jx']
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: cert-manager
               - name: helm-build
                 dir: /workspace/source/env
                 command: jx
-                args: ['step','helm','apply', '--remote']
+                args: ['step','helm','apply', '--remote', '--name', 'jenkins-x']
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: jx
