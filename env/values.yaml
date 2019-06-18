@@ -11,7 +11,7 @@ gitops:
   dev:
     gitUrl: https://github.com/cb-kubecd/environment-jstrachan-ad1.git
   staging:
-    gitUrl: https://github.com/cb-kubecd/environment-jstrachan-ad1-staging.gitt
+    gitUrl: https://github.com/cb-kubecd/environment-jstrachan-ad1-staging.git
   production:
     gitUrl: https://github.com/cb-kubecd/environment-jstrachan-ad1-production.git
 
