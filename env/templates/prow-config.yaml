@@ -15,7 +15,7 @@ data:
                 - promotion-build
         jstrachan:
           repos:
-            nodey117:
+            nodey126:
               required_status_checks:
                 contexts:
                 - serverless-jenkins
@@ -35,7 +35,7 @@ data:
         - master
         context: ""
         name: promotion
-      jstrachan/nodey117:
+      jstrachan/nodey126:
       - agent: tekton
         branches:
         - master
@@ -49,7 +49,7 @@ data:
         name: promotion-build
         rerun_command: /test this
         trigger: (?m)^/test( all| this),?(\s+|$)
-      jstrachan/nodey117:
+      jstrachan/nodey126:
       - agent: tekton
         always_run: true
         context: serverless-jenkins
@@ -74,7 +74,7 @@ data:
         - needs-ok-to-test
         - needs-rebase
         repos:
-        - jstrachan/nodey117
+        - jstrachan/nodey126
       - missingLabels:
         - do-not-merge
         - do-not-merge/hold

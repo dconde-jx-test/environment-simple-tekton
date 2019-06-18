@@ -22,7 +22,7 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
-      - jstrachan/nodey117
+      - jstrachan/nodey126
       require_self_approval: true
     blunderbuss: {}
     cat: {}
@@ -30,7 +30,7 @@ data:
     config_updater: {}
     external_plugins:
       cb-kubecd/environment-jstrachan-ad2-staging: null
-      jstrachan/nodey117: null
+      jstrachan/nodey126: null
     heart: {}
     owners: {}
     plugins:
@@ -49,7 +49,7 @@ data:
       - heart
       - cat
       - override
-      jstrachan/nodey117:
+      jstrachan/nodey126:
       - config-updater
       - approve
       - assign
@@ -72,7 +72,7 @@ data:
       - cb-kubecd/environment-jstrachan-ad2-staging
       trusted_org: cb-kubecd
     - repos:
-      - jstrachan/nodey117
+      - jstrachan/nodey126
       trusted_org: jstrachan
     welcome:
     - message_template: Welcome
