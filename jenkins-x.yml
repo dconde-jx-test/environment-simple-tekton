@@ -32,6 +32,13 @@ pipelineConfig:
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: cert-manager
+              - name: helm-default-vales
+                dir: /workspace/source/env
+                command: jx
+                args: ['step','create','install', 'values']
+                env:
+                  - name: DEPLOY_NAMESPACE
+                    value: jx
               - name: helm-build
                 dir: /workspace/source/env
                 command: jx
