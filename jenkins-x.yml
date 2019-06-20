@@ -32,7 +32,7 @@ pipelineConfig:
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: cert-manager
-              - name: helm-default-vales
+              - name: helm-cluster-values
                 dir: /workspace/source/env
                 command: jx
                 args: ['step','create','install', 'values', '-b']
@@ -41,7 +41,7 @@ pipelineConfig:
                     value: jx
 
               # TODO only run the following in bootstrap mode!
-              - name: helm-default-vales
+              - name: helm-populate-params
                 dir: /workspace/source/env
                 command: jx
                 args: ['step','create','values', '--name', 'parameters', '--secrets-scheme=local', '--secret-base-path', 'dev-cluster-jstrachan']
