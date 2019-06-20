@@ -1,8 +1,8 @@
 adminUser:
-  password: local:/adminUser:password
+  password: local:dev-cluster-jstrachan/adminuser:password
   username: admin
 docker:
-  password: local:/dockerRegistry:password
+  password: local:dev-cluster-jstrachan/docker:password
   url: https://index.docker.io/v1/
   username: jenkinsxbot
 enableDocker: true
@@ -11,9 +11,7 @@ gitProvider: github
 pipelineUser:
   github:
     host: github.com
-    token: local:/pipelineUser:token
+    token: local:dev-cluster-jstrachan/pipelineuser-github:token
     username: jenkins-x-bot-test
 prow:
-  hmacToken: local:/prow:hmacToken
-gpg:
-  passphrase: local:/gpg:passphrase
+  hmacToken: local:dev-cluster-jstrachan/prow-hmactoken:token

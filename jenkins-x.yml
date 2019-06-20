@@ -39,6 +39,15 @@ pipelineConfig:
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: jx
+
+              # TODO only run the following in bootstrap mode!
+              - name: helm-default-vales
+                dir: /workspace/source/env
+                command: jx
+                args: ['step','create','values', '--name', 'parameters', '--secrets-scheme=local', '--secret-base-path', 'dev-cluster-jstrachan']
+                env:
+                  - name: DEPLOY_NAMESPACE
+                    value: jx
               - name: helm-build
                 dir: /workspace/source/env
                 command: jx
