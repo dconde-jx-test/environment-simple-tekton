@@ -1,4 +1,11 @@
 auth:
   git:
-    username: jenkins-x-bot-test
+    username: {{ .Parameters.pipelineUser.github.username }}
+    password: {{ .Parameters.pipelineUser.github.password }}
+
+docker:
+  username: {{ .Parameters.docker.username }}
+  password: "{{ .Parameters.docker.password }}"
+  url: {{ .Parameters.docker.url }}
+
 tillerNamespace: ""

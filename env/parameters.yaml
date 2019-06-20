@@ -1,0 +1,19 @@
+adminUser:
+  password: local:/adminUser:password
+  username: admin
+docker:
+  password: local:/dockerRegistry:password
+  url: https://index.docker.io/v1/
+  username: jenkinsxbot
+enableDocker: true
+enableGpg: false
+gitProvider: github
+pipelineUser:
+  github:
+    host: github.com
+    password: local:/pipelineUser:token
+    username: admin
+prow:
+  hmacToken: local:/prow:hmacToken
+gpg:
+  passphrase: local:/gpg:passphrase

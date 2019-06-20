@@ -22,17 +22,6 @@ controllerworkflow:
 jenkins:
   enabled: false
 jenkins-x-platform:
-  PipelineSecrets:
-    DockerConfig: |-
-      {
-          "credHelpers": {
-              "gcr.io": "gcloud",
-              "us.gcr.io": "gcloud",
-              "eu.gcr.io": "gcloud",
-              "asia.gcr.io": "gcloud",
-              "staging-k8s.gcr.io": "gcloud"
-          }
-      }
   chartmuseum:
     enabled: true
     env:
@@ -83,19 +72,3 @@ jenkins-x-platform:
       size: 100Gi
   postinstalljob:
     enabled: "true"
-prow:
-  auth:
-    git:
-      username: jenkins-x-bot-test
-  buildnum:
-    enabled: false
-  pipelinerunner:
-    enabled: "true"
-  sinker:
-    replicaCount: 0
-  tillerNamespace: ""
-tekton:
-  auth:
-    git:
-      username: jenkins-x-bot-test
-  tillerNamespace: ""

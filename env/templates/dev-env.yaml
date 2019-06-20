@@ -26,7 +26,7 @@ spec:
     helmTemplate: true
     importMode: YAML
     kubeProvider: gke
-    pipelineUsername: {{ .Values.prow.auth.git.username }}
+    pipelineUsername: {{ .Values.prow.username }}
     promotionEngine: Prow
     prowEngine: Tekton
     quickstartLocations:
