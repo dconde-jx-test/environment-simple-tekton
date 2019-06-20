@@ -1,6 +1,6 @@
-hmacToken: {{ .Parameters.prow.hmacToken }}
-oauthToken: {{ .Parameters.pipelineUser.github.token }}
-user: {{ .Parameters.pipelineUser.github.username }}
+hmacToken: "{{ .Parameters.prow.hmacToken }}"
+oauthToken: "{{ .Parameters.pipelineUser.github.token }}"
+user: "{{ .Parameters.pipelineUser.github.username }}"
 
 buildnum:
   enabled: false

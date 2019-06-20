@@ -1,11 +1,11 @@
 auth:
   git:
-    username: {{ .Parameters.pipelineUser.github.username }}
-    password: {{ .Parameters.pipelineUser.github.token }}
+    username: "{{ .Parameters.pipelineUser.github.username }}"
+    password: "{{ .Parameters.pipelineUser.github.token }}"
 
 docker:
-  username: {{ .Parameters.docker.username }}
+  username: "{{ .Parameters.docker.username }}"
   password: "{{ .Parameters.docker.password }}"
-  url: {{ .Parameters.docker.url }}
+  url: "{{ .Parameters.docker.url }}"
 
 tillerNamespace: ""

@@ -1,13 +1,13 @@
-JXBasicAuth: {{ .Parameters.adminUser.username }}:{SHA}{{ .Parameters.adminUser.password | hashPassword }}
+JXBasicAuth: "{{ .Parameters.adminUser.username }}:{SHA}{{ .Parameters.adminUser.password | hashPassword }}"
 
 chartmuseum:
   env:
     secret:
-      BASIC_AUTH_USER: {{ .Parameters.adminUser.username }}
-      BASIC_AUTH_PASS: {{ .Parameters.adminUser.password }}
+      BASIC_AUTH_USER: "{{ .Parameters.adminUser.username }}"
+      BASIC_AUTH_PASS: "{{ .Parameters.adminUser.password }}"
 
 nexus:
-    defaultAdminPassword: {{ .Parameters.adminUser.password }}
+    defaultAdminPassword: "{{ .Parameters.adminUser.password }}"
 
 PipelineSecrets:
     DockerConfig: |-
@@ -20,8 +20,8 @@ PipelineSecrets:
               "staging-k8s.gcr.io": "gcr"
           }
       }
-    GitCreds: https://{{ .Parameters.pipelineUser.github.username }}:{{ .Parameters.pipelineUser.github.token }}@{{ .Parameters.pipelineUser.github.host }}
-    GithubToken: {{ .Parameters.pipelineUser.github.token }}
+    GitCreds: "https://{{ .Parameters.pipelineUser.github.username }}:{{ .Parameters.pipelineUser.github.token }}@{{ .Parameters.pipelineUser.github.host }}"
+    GithubToken: "{{ .Parameters.pipelineUser.github.token }}"
     MavenSettingsXML: |-
         <settings>
             <localRepository>/home/jenkins/.mvnrepository</localRepository>
@@ -117,5 +117,5 @@ PipelineSecrets:
             StrictHostKeyChecking no
 
 JenkinsXGitHub:
-    username: {{ .Parameters.pipelineUser.github.username }}
-    password: {{ .Parameters.pipelineUser.github.token }}
+    username: "{{ .Parameters.pipelineUser.github.username }}"
+    password: "{{ .Parameters.pipelineUser.github.token }}"
