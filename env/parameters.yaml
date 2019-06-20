@@ -12,7 +12,7 @@ pipelineUser:
   github:
     host: github.com
     token: local:/pipelineUser:token
-    username: admin
+    username: jenkins-x-bot-test
 prow:
   hmacToken: local:/prow:hmacToken
 gpg:
