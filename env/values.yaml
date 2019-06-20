@@ -75,5 +75,5 @@ jenkins-x-platform:
 
 
 JenkinsXGitHub:
-    username: "{{ .Parameters.pipelineUser.github.username }}"
-    password: "{{ .Parameters.pipelineUser.github.token }}"
+  username: "{{ .Parameters.pipelineUser.github.username }}"
+  password: "{{ .Parameters.pipelineUser.github.token }}"

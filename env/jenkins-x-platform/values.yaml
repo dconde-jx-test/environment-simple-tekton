@@ -115,7 +115,3 @@ PipelineSecrets:
             User git
             IdentityFile /root/.ssh-git/ssh-key
             StrictHostKeyChecking no
-
-JenkinsXGitHub:
-    username: "{{ .Parameters.pipelineUser.github.username }}"
-    password: "{{ .Parameters.pipelineUser.github.token }}"
