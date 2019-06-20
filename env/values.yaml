@@ -72,3 +72,8 @@ jenkins-x-platform:
       size: 100Gi
   postinstalljob:
     enabled: "true"
+
+
+JenkinsXGitHub:
+    username: {{ .Parameters.pipelineUser.github.username }}
+    password: {{ .Parameters.pipelineUser.github.token }}
