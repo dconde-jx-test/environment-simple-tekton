@@ -1,7 +1,7 @@
 auth:
   git:
     username: {{ .Parameters.pipelineUser.github.username }}
-    password: {{ .Parameters.pipelineUser.github.password }}
+    password: {{ .Parameters.pipelineUser.github.token }}
 
 docker:
   username: {{ .Parameters.docker.username }}

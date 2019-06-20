@@ -11,7 +11,7 @@ gitProvider: github
 pipelineUser:
   github:
     host: github.com
-    password: local:/pipelineUser:token
+    token: local:/pipelineUser:token
     username: admin
 prow:
   hmacToken: local:/prow:hmacToken
