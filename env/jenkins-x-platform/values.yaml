@@ -101,7 +101,9 @@ PipelineSecrets:
                     <id>release</id>
                     <properties>
                         <gpg.executable>gpg</gpg.executable>
+{{- if .Parameters.gpg.passphrase }}
                         <gpg.passphrase>{{ .Parameters.gpg.passphrase }}</gpg.passphrase>
+{{- end }}
                     </properties>
                 </profile>
             </profiles>
