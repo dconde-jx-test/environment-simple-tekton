@@ -14,4 +14,4 @@ pipelineUser:
     token: local:dev-cluster-jstrachan/pipelineUser-github:token
     username: jenkins-x-bot-test
 prow:
-  hmacToken: local:dev-cluster-jstrachan/prow-hmacToken:token
+  hmacToken: local:dev-cluster-jstrachan/prow:hmacToken
