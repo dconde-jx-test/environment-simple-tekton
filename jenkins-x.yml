@@ -44,7 +44,7 @@ pipelineConfig:
               - name: helm-populate-params
                 dir: /workspace/source/env
                 command: jx
-                args: ['step','create','values', '--name', 'parameters', '--secrets-scheme=local', '--secret-base-path', 'dev-cluster-jstrachan']
+                args: ['step', 'create', 'values', '--name', 'parameters']
                 env:
                   - name: DEPLOY_NAMESPACE
                     value: jx
