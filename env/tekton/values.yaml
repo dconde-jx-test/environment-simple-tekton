@@ -3,9 +3,11 @@ auth:
     username: "{{ .Parameters.pipelineUser.github.username }}"
     password: "{{ .Parameters.pipelineUser.github.token }}"
 
+{{- if hasKey .Parameters "docker" }}
 docker:
   username: "{{ .Parameters.docker.username }}"
   password: "{{ .Parameters.docker.password }}"
   url: "{{ .Parameters.docker.url }}"
+{{- end }}
 
 tillerNamespace: ""
